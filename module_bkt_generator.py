@@ -9,21 +9,18 @@ class BKTGenerator:
         Parameter:
             
             π: initial probability of hidden states
-            π =  state_1 [ 0.7 ] 
-                 state_2 [ 0.6 ]
+            π =  Unlearn [ 0.7 ] 
+                 Learn   [ 0.6 ]
                  
             A: transition probability matrix
-                            state_1    state_2
-            A = state_1 [     0.3       0.7      ]
-                state_2 [     0.4       0.6      ]
+                            Unlearn    Learn
+            A = Unlearn [     0.3       0.7      ]
+                Learn   [     1.0       0.0      ]
             
             B: emission probability matrix
-                            obs_1       obs_2
-            B = state_1 [     0.2         0.8   ]
-                state_2 [     0.1         0.9   ]
-            
-            hidden_state: set of hidden states
-            hidden_state = [state_1, state_2, ..., state_N]
+                            Incorrect    Correct
+            B = Unlearn [     0.2         0.8    ]
+                Learn   [     0.1         0.9    ]
             
             obs_len: length of generated observations
             obs_len = T
@@ -101,8 +98,8 @@ class BKTGenerator:
             
         
 #%% CASE STUDY 1: BKT sequence
-pi = [[1], 
-      [0]]
+pi = [[0.9], 
+      [0.1]]
 A = [[0.75, 0.25],
      [0, 1]]
 B = [[0.7, 0.3],
@@ -113,7 +110,7 @@ bktg = BKTGenerator(pi, A, B, obs_len)
 
 # GENERATE SEQUENCE
 
-df = bktg.generated_multi_sequences(30)
+df = bktg.generated_multi_sequences(50)
 df = df.rename(columns = {'index': 'item_ID'})
 
 df.to_csv('generated_student_data.csv', index=False)
