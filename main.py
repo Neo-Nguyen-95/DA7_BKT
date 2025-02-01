@@ -3,13 +3,11 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-from module_em import EM4BKT
+from module_em import EM4BKT, multi_sequence_training
 from module_hmm_general import HMM
 from module_bkt_model import BKTModel
 
-#%% EXP 1: BKT FOR INDIVIDUAL
-
-# PART 0: EDA
+# EDA
 data1 = pd.read_csv('generated_student_data.csv')
 data1.head()
 data1.shape
@@ -20,6 +18,9 @@ plt.xlabel('Student score (out of 10)')
 plt.show()
 
 student_list = data1['student_ID'].unique()
+
+
+#%% EXP 1: BKT FOR INDIVIDUAL
 
 # PART 1: ESTIMATED KNOWLEDGE STATE WITH VITERBI ALGO
 viterbi_estimated_state_index_column = np.array([])
@@ -36,6 +37,7 @@ for sid in student_list:
     scores = data1[data1['student_ID'] == sid]['score'].astype(int).to_list()
     embkt = EM4BKT(scores)
     embkt.training()
+    # embkt.plot_log_likelihood()
 
     # PART 1
     hmm = HMM(embkt.pi,
@@ -95,6 +97,14 @@ bkt_df.describe()
 # setting   0.10   0.25  0.3   0.15
 
 #%% EXP 2: BKT FOR GROUP OF STUDENT
+(pi, A, B, 
+ log_likelihood, epoch
+ ) = multi_sequence_training(df=data1, ll_eps=1e-7, max_epoch = 200)
+
+pd.Series(log_likelihood).plot()
+plt.show()
+
+
 
 
 
