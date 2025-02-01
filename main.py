@@ -100,9 +100,13 @@ bkt_df.describe()
 (pi, A, B, 
  log_likelihood, epoch
  ) = multi_sequence_training(df=data1, ll_eps=1e-7, max_epoch = 200)
+# Result
+#         p_Lt   p_T   p_G    p_S
+# value   0.00   0.44  0.38   0.21
 
 pd.Series(log_likelihood).plot()
 plt.show()
+
 
 
 
