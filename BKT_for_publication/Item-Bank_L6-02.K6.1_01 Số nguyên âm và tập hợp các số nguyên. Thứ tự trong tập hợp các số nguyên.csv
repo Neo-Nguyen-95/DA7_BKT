@@ -1,0 +1,24 @@
+﻿thanh_phan_kien_thuc_id,ch_id,dap_an,muc_do,ch_loai,chi_bao_hanh_vi_id,chi_bao_hanh_vi_id_sub
+02.K6.1.4.1,02.K6.1_01_01,B,M1,MC,TH.TDLL.1_Quan sát được,blank
+02.K6.1.1.1,02.K6.1_01_02,B,M1,MC,TH.TDLL.1_Mô tả được kết quả quan sát,blank
+02.K6.1.5.1,02.K6.1_01_03,D,M1,MC,TH.TDLL.1_So sánh được,blank
+02.K6.1.2.1,02.K6.1_01_04,"A
+B",M1,MC,TH.TDLL.1_Quan sát được,blank
+02.K6.1.2.1,02.K6.1_01_05,C,M2,MC,TH.TDLL.1_Mô tả được kết quả quan sát,blank
+02.K6.1.2.1,02.K6.1_01_06,A,M1,MC,TH.GQVD.1_Mô tả tình huống,blank
+02.K6.1.3.1,02.K6.1_01_07,C,M1,MC,TH.TDLL.1_Quan sát được,blank
+02.K6.1.3.1,02.K6.1_01_08,D,M1,MC,TH.TDLL.1_Quan sát được,blank
+02.K6.1.5.1,02.K6.1_01_09,D,M2,MC,TH.GQVD.3_Thực hiện được giải pháp,blank
+02.K6.1.1.1,02.K6.1_01_10,"S
+Đ
+S",M1,TF,TH.TDLL.1_Quan sát được,blank
+02.K6.1.2.1,02.K6.1_01_11,"Đ
+Đ
+S",M2,TF,TH.GQVD.4_Kiểm tra để xác nhận/bác bỏ,blank
+02.K6.1.5.1,02.K6.1_01_12,"Đ
+S
+S
+Đ",M2,TF,TH.GQVD.4_Kiểm tra để xác nhận/bác bỏ,blank
+02.K6.1.1.1,02.K6.1_01_13,4,M1,SA,TH.TDLL.1_Mô tả được kết quả quan sát,blank
+02.K6.1.1.1,02.K6.1_01_14,8,M2,SA,TH.TDLL.1_Mô tả được kết quả quan sát,blank
+02.K6.1.4.1,02.K6.1_01_15,7,M3,SA,TH.TDLL.1_Mô tả được kết quả quan sát,blank

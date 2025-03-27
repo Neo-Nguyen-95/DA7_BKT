@@ -15,7 +15,7 @@ class BKTGenerator:
             A: transition probability matrix
                             Unlearn    Learn
             A = Unlearn [     0.3       0.7      ]
-                Learn   [     1.0       0.0      ]
+                Learn   [     0.0       1.0      ]
             
             B: emission probability matrix
                             Incorrect    Correct
